@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dsfv5tarrbq5t" path="res://Enemys/Enemy Forest.tscn" id="5_4642a"]
 [ext_resource type="PackedScene" uid="uid://b8ruhydsb7t7c" path="res://Enemys/Enemy Forest fly.tscn" id="6_7lvdd"]
 [ext_resource type="PackedScene" uid="uid://c0xgedfk1heft" path="res://Escenas/Plataforma X.tscn" id="7_7lvdd"]
+[ext_resource type="Texture2D" uid="uid://b7mm3u5p5fg12" path="res://Imagenes/final.jpg" id="8_yytuy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4642a"]
 texture = ExtResource("1_rjcp1")
@@ -1815,13 +1816,14 @@ sources/1 = SubResource("TileSetAtlasSource_7lvdd")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7uq2"]
 size = Vector2(24540.5, 127)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0c0kl"]
-size = Vector2(228, 884)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oouuj"]
 size = Vector2(21833, 1835)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0c0kl"]
+size = Vector2(11189, 884)
+
 [node name="Nivel1" type="StaticBody2D" unique_id=895985965]
+position = Vector2(0, 176)
 
 [node name="Pared" parent="." unique_id=1080337053 instance=ExtResource("1_gw03o")]
 position = Vector2(7646, -348)
@@ -1844,10 +1846,6 @@ position = Vector2(1196, -344)
 SPEED = 4000.0
 JUMP_VELOCITY = -650.0
 KILL_Y = 2000.0
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=980040769]
-position = Vector2(666, 15)
-shape = SubResource("RectangleShape2D_0c0kl")
 
 [node name="EnemyForest" parent="." unique_id=1313764152 instance=ExtResource("5_4642a")]
 position = Vector2(3419, -123)
@@ -2078,3 +2076,14 @@ position = Vector2(42551, -545)
 
 [node name="EnemyForest16" parent="." unique_id=908527363 instance=ExtResource("5_4642a")]
 position = Vector2(37396, -592)
+
+[node name="Final" type="Sprite2D" parent="." unique_id=905636748]
+position = Vector2(59404.996, -1407)
+scale = Vector2(20.434616, 12.413043)
+texture = ExtResource("8_yytuy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=980040769]
+position = Vector2(59776, 206)
+shape = SubResource("RectangleShape2D_0c0kl")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=154775815]
