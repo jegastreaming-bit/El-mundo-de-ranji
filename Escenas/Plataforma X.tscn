@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c0xgedfk1heft"]
+
+[ext_resource type="Script" uid="uid://ct68ktww4c0fe" path="res://Scripts/plataforma_x.gd" id="1_lgkk5"]
+[ext_resource type="Texture2D" uid="uid://dofwcq2fffo6b" path="res://Imagenes/platforms.png" id="2_gu03l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7uq2"]
+size = Vector2(231.78607, 123.76395)
+
+[node name="PlataformaX" type="AnimatableBody2D" unique_id=1912007287]
+script = ExtResource("1_lgkk5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=632386555]
+position = Vector2(366.50003, 301.5)
+rotation = -3.1415925
+scale = Vector2(1.2727252, -0.6544716)
+shape = SubResource("RectangleShape2D_f7uq2")
+
+[node name="Platforms" type="Sprite2D" parent="." unique_id=1901079311]
+texture_filter = 1
+position = Vector2(365, 301)
+scale = Vector2(8.9642935, 8.647056)
+texture = ExtResource("2_gu03l")
