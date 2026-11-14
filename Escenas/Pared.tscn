@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://2fdslkx0i7tp"]
+
+[ext_resource type="Texture2D" uid="uid://cn6armsbn5j5r" path="res://Imagenes/Continuacion del suelo.png" id="1_3snio"]
+
+[node name="Pared" type="Node2D" unique_id=1080337053]
+
+[node name="ContinuacionDelSuelo" type="Sprite2D" parent="." unique_id=1129253425]
+texture_filter = 1
+position = Vector2(-42382, 4256.9995)
+scale = Vector2(83.909096, 72.9171)
+texture = ExtResource("1_3snio")
+
+[node name="ContinuacionDelSuelo2" type="Sprite2D" parent="." unique_id=1094149915]
+texture_filter = 1
+position = Vector2(-3669.9998, 4268)
+scale = Vector2(83.909096, 72.9171)
+texture = ExtResource("1_3snio")
+
+[node name="ContinuacionDelSuelo3" type="Sprite2D" parent="." unique_id=1622034902]
+texture_filter = 1
+position = Vector2(32975, 4310)
+scale = Vector2(83.909096, 72.9171)
+texture = ExtResource("1_3snio")
+
+[node name="ContinuacionDelSuelo4" type="Sprite2D" parent="." unique_id=1519099643]
+texture_filter = 1
+position = Vector2(69419, 4312)
+scale = Vector2(83.909096, 72.9171)
+texture = ExtResource("1_3snio")
+
+[node name="ContinuacionDelSuelo5" type="Sprite2D" parent="." unique_id=26342187]
+texture_filter = 1
+position = Vector2(106108.99, 4316)
+scale = Vector2(83.909096, 72.9171)
+texture = ExtResource("1_3snio")
+
+[node name="ContinuacionDelSuelo6" type="Sprite2D" parent="." unique_id=1227650358]
+texture_filter = 1
+position = Vector2(142056, 4327)
+scale = Vector2(83.909096, 72.9171)
+texture = ExtResource("1_3snio")
