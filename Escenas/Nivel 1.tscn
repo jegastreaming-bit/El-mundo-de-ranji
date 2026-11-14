@@ -1812,6 +1812,9 @@ sources/1 = SubResource("TileSetAtlasSource_7lvdd")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7uq2"]
 size = Vector2(24540.5, 127)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0c0kl"]
+size = Vector2(228, 884)
+
 [node name="Nivel1" type="StaticBody2D" unique_id=895985965]
 
 [node name="Pared" parent="." unique_id=1080337053 instance=ExtResource("1_gw03o")]
@@ -1828,3 +1831,7 @@ shape = SubResource("RectangleShape2D_f7uq2")
 
 [node name="Personaje" parent="." unique_id=1651539906 instance=ExtResource("2_gw03o")]
 position = Vector2(1196, -344)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=980040769]
+position = Vector2(666, 15)
+shape = SubResource("RectangleShape2D_0c0kl")
