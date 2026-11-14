@@ -1851,12 +1851,53 @@ shape = SubResource("RectangleShape2D_0c0kl")
 
 [node name="EnemyForest" parent="." unique_id=1313764152 instance=ExtResource("5_4642a")]
 position = Vector2(3419, -123)
+VELOCIDAD = 400.0
+DISTANCIA_PATRULLA = 600.0
+
+[node name="EnemyForest2" parent="." unique_id=2069361418 instance=ExtResource("5_4642a")]
+position = Vector2(4567, -26)
+VELOCIDAD = 400.0
+DISTANCIA_PATRULLA = 600.0
+
+[node name="EnemyForest3" parent="." unique_id=1335313990 instance=ExtResource("5_4642a")]
+position = Vector2(5768, -265)
+VELOCIDAD = 400.0
+DISTANCIA_PATRULLA = 600.0
+
+[node name="EnemyForest4" parent="." unique_id=50341418 instance=ExtResource("5_4642a")]
+position = Vector2(10001, -229)
+VELOCIDAD = 400.0
+DISTANCIA_PATRULLA = 600.0
 
 [node name="EnemyForestFly" parent="." unique_id=160523695 instance=ExtResource("6_7lvdd")]
 position = Vector2(4930, -511)
 
 [node name="PlataformaX" parent="." unique_id=1912007287 instance=ExtResource("7_7lvdd")]
 position = Vector2(25092, 161.00003)
+scale = Vector2(1.7269555, 1.1664633)
+velocidad = 1.5
+distancia = 450.0
+
+[node name="PlataformaX11" parent="." unique_id=408104559 instance=ExtResource("7_7lvdd")]
+position = Vector2(6525.004, -141.99997)
+scale = Vector2(1.7269555, 1.1664633)
+velocidad = 1.5
+distancia = 450.0
+
+[node name="PlataformaX12" parent="." unique_id=405114193 instance=ExtResource("7_7lvdd")]
+position = Vector2(7058, -770)
+scale = Vector2(1.7269555, 1.1664633)
+velocidad = 1.5
+distancia = 450.0
+
+[node name="PlataformaX13" parent="." unique_id=1790647913 instance=ExtResource("7_7lvdd")]
+position = Vector2(8248, -397.00003)
+scale = Vector2(1.7269555, 1.1664633)
+velocidad = 1.5
+distancia = 450.0
+
+[node name="PlataformaX14" parent="." unique_id=161063899 instance=ExtResource("7_7lvdd")]
+position = Vector2(9521, -604)
 scale = Vector2(1.7269555, 1.1664633)
 velocidad = 1.5
 distancia = 450.0

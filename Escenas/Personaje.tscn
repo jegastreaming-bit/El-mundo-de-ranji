@@ -71,24 +71,21 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0c0kl"]
-radius = 45.5
+radius = 70.0
 height = 144.0
 
 [node name="Personaje" type="CharacterBody2D" unique_id=1651539906]
 position = Vector2(201, 222)
 script = ExtResource("1_0gco6")
-SPEED = 600.0
-JUMP_VELOCITY = -500.0
 
 [node name="Ranji" type="AnimatedSprite2D" parent="." unique_id=1396417867]
 position = Vector2(244.99998, 134)
 scale = Vector2(0.37574518, 0.38695088)
 sprite_frames = SubResource("SpriteFrames_f7uq2")
-animation = &"Jump"
-frame_progress = 0.71102977
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24301644]
-position = Vector2(240, 128)
+position = Vector2(250, 135)
 shape = SubResource("CapsuleShape2D_0c0kl")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1750885953]

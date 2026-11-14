@@ -320,11 +320,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7syq"]
-size = Vector2(584, 172)
+size = Vector2(903.5, 372.5)
 
 [node name="EnemyForest" type="CharacterBody2D" unique_id=1313764152]
 script = ExtResource("1_w4jhd")
-FRAME_DANO = 5
+RANGO_X = 180.0
+RANGO_Y = 130.0
+RETRASO_GOLPE = 0.5
+DURACION_ATAQUE = 0.8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1734463707]
 position = Vector2(483, 307)
@@ -342,6 +345,6 @@ frame_progress = 1.0
 [node name="ZonaAtaque" type="Area2D" parent="." unique_id=1991837047]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaAtaque" unique_id=691638115]
-position = Vector2(349, 307)
+position = Vector2(178, 309)
 shape = SubResource("RectangleShape2D_g7syq")
 debug_color = Color(0.9411765, 0.09019608, 0.1882353, 0.41960785)

@@ -1,90 +1,143 @@
 extends CharacterBody2D
 
-const EnemyFWalk = 300
-const Gravedad = 70
+# Movimiento
+@export var VELOCIDAD: float = 150.0
+@export var DISTANCIA_PATRULLA: float = 200.0
 
-@export var DANO: int = 100               # 100 = te mata de un golpe, 10 = te quita poca vida
-@export var RETRASO_GOLPE: float = 0.3    # Segundos desde que empieza Attack hasta que pega
-@export var COOLDOWN_ATAQUE: float = 1.0  # Espera entre ataques
+# Vida
+@export var VIDA_MAXIMA: int = 30             # Con DANO_ATAQUE = 10 del jugador, muere a los 3 golpes
 
+# Ataque
+@export var DANO: int = 100
+@export var RANGO_X: float = 120.0
+@export var RANGO_Y: float = 200.0
+@export var RETRASO_GOLPE: float = 0.3
+@export var DURACION_ATAQUE: float = 0.6
+@export var COOLDOWN_ATAQUE: float = 1.0
+
+var gravedad: float = ProjectSettings.get_setting("physics/2d/default_gravity")
+var direccion: int = -1
+var inicio_x: float = 0.0
 var atacando: bool = false
 var puede_atacar: bool = true
-var jugador_en_rango: Node2D = null
+var muerto: bool = false
+var vida_actual: int = 0
+var jugador: Node2D = null
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var zona_ataque: Area2D = $ZonaAtaque
 
 
-func _ready():
-	velocity.x = -EnemyFWalk
+func _ready() -> void:
+	add_to_group("enemigo")          # El jugador encuentra a los enemigos por este grupo
+	vida_actual = VIDA_MAXIMA
+	inicio_x = global_position.x
 	sprite.play("Walk")
 
-	zona_ataque.body_entered.connect(_on_zona_ataque_body_entered)
-	zona_ataque.body_exited.connect(_on_zona_ataque_body_exited)
-	sprite.animation_finished.connect(_on_animation_finished)
 
+func _physics_process(delta: float) -> void:
+	if muerto:
+		return
 
-func _physics_process(delta):
-	velocity.y += Gravedad
+	if not is_on_floor():
+		velocity.y += gravedad * delta
 
-	# Si el jugador está en rango, ataca
-	if jugador_en_rango and puede_atacar and not atacando:
-		iniciar_ataque()
+	if jugador == null:
+		jugador = get_tree().get_first_node_in_group("player")
 
 	if atacando:
 		velocity.x = 0
+	elif jugador_en_rango():
+		if puede_atacar:
+			atacar()
+		else:
+			velocity.x = 0
+			mirar_al_jugador()
+			sprite.play("Idle")
 	else:
-		# Tu patrullaje original
-		if is_on_wall():
-			if !sprite.flip_h:
-				velocity.x = EnemyFWalk
-			else:
-				velocity.x = -EnemyFWalk
-
-			if velocity.x < 0:
-				sprite.flip_h = false
-			elif velocity.x > 0:
-				sprite.flip_h = true
+		patrullar()
 
 	move_and_slide()
 
 
-func iniciar_ataque() -> void:
-	print("Enemigo: empieza ataque")
+# ---------- PATRULLA ----------
+
+func patrullar() -> void:
+	if global_position.x <= inicio_x - DISTANCIA_PATRULLA:
+		direccion = 1
+	elif global_position.x >= inicio_x + DISTANCIA_PATRULLA:
+		direccion = -1
+
+	velocity.x = direccion * VELOCIDAD
+	sprite.flip_h = direccion > 0
+	sprite.play("Walk")
+
+
+# ---------- ATAQUE ----------
+
+func atacar() -> void:
 	atacando = true
 	puede_atacar = false
-
-	# Mirar hacia el jugador
-	sprite.flip_h = jugador_en_rango.global_position.x > global_position.x
+	velocity.x = 0
+	mirar_al_jugador()
 	sprite.play("Attack")
 
-	# Esperar un momento y pegar el golpe
 	await get_tree().create_timer(RETRASO_GOLPE).timeout
 
-	if jugador_en_rango and jugador_en_rango.has_method("take_damage"):
-		print("Enemigo: GOLPE al jugador")
-		jugador_en_rango.take_damage(DANO)
-	else:
-		print("Enemigo: el jugador salió del rango, golpe fallado")
+	# Si lo mataron durante el ataque, no pega
+	if not muerto and jugador_en_rango() and jugador.has_method("take_damage"):
+		jugador.take_damage(DANO)
+
+	await get_tree().create_timer(max(DURACION_ATAQUE - RETRASO_GOLPE, 0.01)).timeout
+	atacando = false
+
+	await get_tree().create_timer(COOLDOWN_ATAQUE).timeout
+	puede_atacar = true
 
 
-func _on_animation_finished() -> void:
-	if sprite.animation == "Attack":
-		atacando = false
-		sprite.play("Walk")
-		velocity.x = EnemyFWalk if sprite.flip_h else -EnemyFWalk
-
-		await get_tree().create_timer(COOLDOWN_ATAQUE).timeout
-		puede_atacar = true
+func jugador_en_rango() -> bool:
+	if jugador == null:
+		return false
+	var dx = abs(jugador.global_position.x - global_position.x)
+	var dy = abs(jugador.global_position.y - global_position.y)
+	return dx <= RANGO_X and dy <= RANGO_Y
 
 
-func _on_zona_ataque_body_entered(body: Node2D) -> void:
-	print("ZonaAtaque detectó: ", body.name)
-	if body.is_in_group("player"):
-		print("Es el jugador")
-		jugador_en_rango = body
+func mirar_al_jugador() -> void:
+	if jugador:
+		sprite.flip_h = jugador.global_position.x > global_position.x
 
 
-func _on_zona_ataque_body_exited(body: Node2D) -> void:
-	if body == jugador_en_rango:
-		jugador_en_rango = null
+# ---------- VIDA Y MUERTE ----------
+
+func take_damage(cantidad: int) -> void:
+	if muerto:
+		return
+
+	vida_actual -= cantidad
+	print("Enemigo: vida = ", vida_actual)
+
+	# Destello rojo al recibir el golpe
+	sprite.modulate = Color(1, 0.3, 0.3)
+	var tween = create_tween()
+	tween.tween_property(sprite, "modulate", Color(1, 1, 1), 0.2)
+
+	if vida_actual <= 0:
+		morir()
+
+
+func morir() -> void:
+	muerto = true
+	atacando = false
+	velocity = Vector2.ZERO
+	remove_from_group("enemigo")
+
+	# Desactiva la colisión para que ya no estorbe
+	$CollisionShape2D.set_deferred("disabled", true)
+
+	# Se desvanece
+	var tween = create_tween()
+	tween.tween_property(sprite, "modulate:a", 0.0, 0.5)
+
+	# Espera a que terminen los temporizadores pendientes antes de borrarse
+	await get_tree().create_timer(2.0).timeout
+	queue_free()
