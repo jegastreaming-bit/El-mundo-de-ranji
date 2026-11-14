@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="El mundo de ranji"
-run/main_scene="uid://qr62sowijqe2"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
