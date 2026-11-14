@@ -1841,8 +1841,9 @@ shape = SubResource("RectangleShape2D_f7uq2")
 
 [node name="Personaje" parent="." unique_id=1651539906 instance=ExtResource("2_gw03o")]
 position = Vector2(1196, -344)
-SPEED = 650.0
+SPEED = 1000.0
 JUMP_VELOCITY = -650.0
+KILL_Y = 2000.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=980040769]
 position = Vector2(666, 15)

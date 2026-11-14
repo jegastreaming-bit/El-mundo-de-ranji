@@ -1,4 +1,3 @@
-
 extends CharacterBody2D
 
 # Movimiento
@@ -6,11 +5,20 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY: float = -400.0
 @export var MAX_JUMPS: int = 3
 
+# Reaparición (NUEVO)
+@export var KILL_Y: float = 1000.0  # Altura del vacío, ajústala a tu nivel
+
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jump_count: int = 0
+var respawn_position: Vector2 = Vector2.ZERO  # NUEVO
 
 # Referencia al personaje
 @onready var ranji = $Ranji
+
+
+# NUEVO: guarda la posición inicial al empezar el juego
+func _ready() -> void:
+	respawn_position = global_position
 
 
 func _physics_process(delta: float) -> void:
@@ -55,3 +63,14 @@ func _physics_process(delta: float) -> void:
 		ranji.play("Left")
 	else:
 		ranji.play("Idle")
+
+	# 7. Caída al vacío (NUEVO)
+	if global_position.y > KILL_Y:
+		respawn()
+
+
+# NUEVO: devuelve al personaje al inicio
+func respawn() -> void:
+	global_position = respawn_position
+	velocity = Vector2.ZERO
+	jump_count = 0
