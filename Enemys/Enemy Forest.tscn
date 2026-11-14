@@ -1,3 +1,77 @@
 [gd_scene format=3 uid="uid://dsfv5tarrbq5t"]
 
-[node name="EnemyForest" type="Node2D" unique_id=190884890]
+[ext_resource type="Texture2D" uid="uid://735vw8sqsb3k" path="res://Enemys/Mushroom-Idle.png" id="1_eojlw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0c0kl"]
+size = Vector2(144, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8205j"]
+atlas = ExtResource("1_eojlw")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jqbx"]
+atlas = ExtResource("1_eojlw")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2aqnr"]
+atlas = ExtResource("1_eojlw")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4jhd"]
+atlas = ExtResource("1_eojlw")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38cxt"]
+atlas = ExtResource("1_eojlw")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lp5x"]
+atlas = ExtResource("1_eojlw")
+region = Rect2(400, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsvpl"]
+atlas = ExtResource("1_eojlw")
+region = Rect2(480, 0, 80, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7uq2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8205j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jqbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2aqnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4jhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38cxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lp5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsvpl")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 12.0
+}]
+
+[node name="EnemyForest" type="CharacterBody2D" unique_id=1313764152]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1734463707]
+position = Vector2(483, 307)
+shape = SubResource("RectangleShape2D_0c0kl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1299099510]
+texture_filter = 1
+position = Vector2(482.5, 246.5)
+scale = Vector2(4.6125, 4.609375)
+sprite_frames = SubResource("SpriteFrames_f7uq2")
+animation = &"Idle"
+frame_progress = 0.2751709

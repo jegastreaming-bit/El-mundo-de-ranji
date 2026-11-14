@@ -1,3 +1,84 @@
 [gd_scene format=3 uid="uid://b8ruhydsb7t7c"]
 
-[node name="EnemyForestFly" type="Node2D" unique_id=1940209020]
+[ext_resource type="Texture2D" uid="uid://vt8quk78jfbh" path="res://Enemys/Flying enemy.png" id="1_yhaqt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2j6x"]
+size = Vector2(249, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gctc"]
+atlas = ExtResource("1_yhaqt")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8j5lc"]
+atlas = ExtResource("1_yhaqt")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5sfd"]
+atlas = ExtResource("1_yhaqt")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u4qr"]
+atlas = ExtResource("1_yhaqt")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a487r"]
+atlas = ExtResource("1_yhaqt")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dnc7"]
+atlas = ExtResource("1_yhaqt")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4a5q"]
+atlas = ExtResource("1_yhaqt")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xmkv"]
+atlas = ExtResource("1_yhaqt")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7uq2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gctc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8j5lc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5sfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u4qr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a487r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dnc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4a5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xmkv")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 12.0
+}]
+
+[node name="EnemyForestFly" type="CharacterBody2D" unique_id=160523695]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1931499306]
+position = Vector2(509.5, 258)
+shape = SubResource("RectangleShape2D_x2j6x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1448849577]
+texture_filter = 1
+position = Vector2(513, 265)
+scale = Vector2(5.59375, 5.171875)
+sprite_frames = SubResource("SpriteFrames_f7uq2")
+animation = &"Idle"
+frame_progress = 0.4125162
