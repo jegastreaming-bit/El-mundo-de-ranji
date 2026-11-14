@@ -74,3 +74,4 @@ func respawn() -> void:
 	global_position = respawn_position
 	velocity = Vector2.ZERO
 	jump_count = 0
+	
