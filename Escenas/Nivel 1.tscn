@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://08ro8cr13k8t" path="res://Imagenes/images (1).jpg" id="1_rjcp1"]
 [ext_resource type="PackedScene" uid="uid://yfnjq6pn2dh2" path="res://Escenas/Personaje.tscn" id="2_gw03o"]
 [ext_resource type="Texture2D" uid="uid://xir4egfnbtku" path="res://Imagenes/Pasto.jpg" id="3_xrc30"]
+[ext_resource type="PackedScene" uid="uid://dsfv5tarrbq5t" path="res://Enemys/Enemy Forest.tscn" id="5_4642a"]
+[ext_resource type="PackedScene" uid="uid://b8ruhydsb7t7c" path="res://Enemys/Enemy Forest fly.tscn" id="6_7lvdd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4642a"]
 texture = ExtResource("1_rjcp1")
@@ -1835,3 +1837,9 @@ position = Vector2(1196, -344)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=980040769]
 position = Vector2(666, 15)
 shape = SubResource("RectangleShape2D_0c0kl")
+
+[node name="EnemyForest" parent="." unique_id=1313764152 instance=ExtResource("5_4642a")]
+position = Vector2(3419, -123)
+
+[node name="EnemyForestFly" parent="." unique_id=160523695 instance=ExtResource("6_7lvdd")]
+position = Vector2(4621, -73)
