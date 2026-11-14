@@ -2288,7 +2288,7 @@ position = Vector2(3799, 887)
 shape = SubResource("RectangleShape2D_f7uq2")
 
 [node name="Personaje" parent="." unique_id=1651539906 instance=ExtResource("3_j3pye")]
-position = Vector2(2216, -593)
+position = Vector2(1469, 282)
 SPEED = 650.0
 
 [node name="EnemyForest" parent="." unique_id=1313764152 instance=ExtResource("7_0ecuo")]
@@ -2299,3 +2299,8 @@ scale = Vector2(1.4918419, 1.3534024)
 position = Vector2(7106.0005, 423.99997)
 scale = Vector2(2.498, 1.866)
 texture = ExtResource("8_5uede")
+
+[node name="Arbusto2" type="Sprite2D" parent="." unique_id=1832280376]
+position = Vector2(2982, 546.99994)
+scale = Vector2(1.6600003, 1.3759998)
+texture = ExtResource("5_dye8q")
