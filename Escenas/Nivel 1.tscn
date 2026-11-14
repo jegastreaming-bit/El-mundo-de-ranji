@@ -1870,7 +1870,19 @@ VELOCIDAD = 400.0
 DISTANCIA_PATRULLA = 600.0
 
 [node name="EnemyForestFly" parent="." unique_id=160523695 instance=ExtResource("6_7lvdd")]
-position = Vector2(4930, -511)
+position = Vector2(5023, -826)
+
+[node name="EnemyForestFly2" parent="." unique_id=1544182472 instance=ExtResource("6_7lvdd")]
+position = Vector2(7060, -1442)
+
+[node name="EnemyForestFly3" parent="." unique_id=1173520109 instance=ExtResource("6_7lvdd")]
+position = Vector2(6290, -1099)
+
+[node name="EnemyForestFly4" parent="." unique_id=1345213414 instance=ExtResource("6_7lvdd")]
+position = Vector2(8806, -1620)
+
+[node name="EnemyForestFly5" parent="." unique_id=650378517 instance=ExtResource("6_7lvdd")]
+position = Vector2(11790, -1591)
 
 [node name="PlataformaX" parent="." unique_id=1912007287 instance=ExtResource("7_7lvdd")]
 position = Vector2(25092, 161.00003)
@@ -1957,7 +1969,7 @@ velocidad = 1.6
 distancia = 440.0
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1747682542]
-position = Vector2(43252.5, 917.5)
+position = Vector2(43230, 965)
 shape = SubResource("RectangleShape2D_oouuj")
 
 [node name="EnemyForest5" parent="." unique_id=1188198123 instance=ExtResource("5_4642a")]
