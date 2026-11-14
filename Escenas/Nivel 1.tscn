@@ -1884,6 +1884,39 @@ position = Vector2(8806, -1620)
 [node name="EnemyForestFly5" parent="." unique_id=650378517 instance=ExtResource("6_7lvdd")]
 position = Vector2(11790, -1591)
 
+[node name="EnemyForestFly6" parent="." unique_id=1049256644 instance=ExtResource("6_7lvdd")]
+position = Vector2(11790, -1591)
+
+[node name="EnemyForestFly7" parent="." unique_id=2136030730 instance=ExtResource("6_7lvdd")]
+position = Vector2(14312, -560)
+
+[node name="EnemyForestFly8" parent="." unique_id=1699972411 instance=ExtResource("6_7lvdd")]
+position = Vector2(16271, -1219)
+
+[node name="EnemyForestFly9" parent="." unique_id=2127229852 instance=ExtResource("6_7lvdd")]
+position = Vector2(18499, -1124)
+
+[node name="EnemyForestFly10" parent="." unique_id=1816341561 instance=ExtResource("6_7lvdd")]
+position = Vector2(26615, -1034)
+
+[node name="EnemyForestFly11" parent="." unique_id=1718674298 instance=ExtResource("6_7lvdd")]
+position = Vector2(29605, 787)
+
+[node name="EnemyForestFly12" parent="." unique_id=878400063 instance=ExtResource("6_7lvdd")]
+position = Vector2(34394, -967)
+
+[node name="EnemyForestFly15" parent="." unique_id=45546778 instance=ExtResource("6_7lvdd")]
+position = Vector2(38733, -1124)
+
+[node name="EnemyForestFly16" parent="." unique_id=356523836 instance=ExtResource("6_7lvdd")]
+position = Vector2(38733, -1124)
+
+[node name="EnemyForestFly13" parent="." unique_id=1180487511 instance=ExtResource("6_7lvdd")]
+position = Vector2(36754, -1372)
+
+[node name="EnemyForestFly14" parent="." unique_id=1970426023 instance=ExtResource("6_7lvdd")]
+position = Vector2(36754, -1372)
+
 [node name="PlataformaX" parent="." unique_id=1912007287 instance=ExtResource("7_7lvdd")]
 position = Vector2(25092, 161.00003)
 scale = Vector2(1.7269555, 1.1664633)
@@ -1975,6 +2008,29 @@ shape = SubResource("RectangleShape2D_oouuj")
 [node name="EnemyForest5" parent="." unique_id=1188198123 instance=ExtResource("5_4642a")]
 position = Vector2(13681, -534)
 
+[node name="EnemyForest17" parent="." unique_id=1203125546 instance=ExtResource("5_4642a")]
+position = Vector2(15493, -551)
+
+[node name="EnemyForest20" parent="." unique_id=1709648849 instance=ExtResource("5_4642a")]
+position = Vector2(17877, -109)
+
+[node name="EnemyForest21" parent="." unique_id=1018835801 instance=ExtResource("5_4642a")]
+position = Vector2(19160, -586)
+
+[node name="EnemyForest22" parent="." unique_id=1989467142 instance=ExtResource("5_4642a")]
+position = Vector2(18415, -491)
+
+[node name="EnemyForest23" parent="." unique_id=1814655549 instance=ExtResource("5_4642a")]
+position = Vector2(18909, -189)
+
+[node name="EnemyForest18" parent="." unique_id=372177275 instance=ExtResource("5_4642a")]
+position = Vector2(16880, -135.00082)
+rotation = -1.0023946
+
+[node name="EnemyForest19" parent="." unique_id=851427169 instance=ExtResource("5_4642a")]
+position = Vector2(19920, -120.00104)
+rotation = -1.0023946
+
 [node name="EnemyForest6" parent="." unique_id=453540376 instance=ExtResource("5_4642a")]
 position = Vector2(46313, -588)
 
@@ -1984,8 +2040,23 @@ position = Vector2(47534, -461)
 [node name="EnemyForest8" parent="." unique_id=78400343 instance=ExtResource("5_4642a")]
 position = Vector2(50088, -414)
 
+[node name="EnemyForest24" parent="." unique_id=739172130 instance=ExtResource("5_4642a")]
+position = Vector2(50055, -915)
+
+[node name="EnemyForest25" parent="." unique_id=2084247493 instance=ExtResource("5_4642a")]
+position = Vector2(49163, -993)
+
+[node name="EnemyForest26" parent="." unique_id=1616598605 instance=ExtResource("5_4642a")]
+position = Vector2(49293, -661)
+
+[node name="EnemyForest27" parent="." unique_id=1000073985 instance=ExtResource("5_4642a")]
+position = Vector2(48694, -485)
+
 [node name="EnemyForest9" parent="." unique_id=713700711 instance=ExtResource("5_4642a")]
-position = Vector2(49010, -541)
+position = Vector2(47896, -769)
+
+[node name="EnemyForest28" parent="." unique_id=1734827829 instance=ExtResource("5_4642a")]
+position = Vector2(48078, -450)
 
 [node name="EnemyForest10" parent="." unique_id=1919536799 instance=ExtResource("5_4642a")]
 position = Vector2(45091, -541)
