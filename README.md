@@ -1,2 +1,0 @@
-# El mundo de ranji
-
