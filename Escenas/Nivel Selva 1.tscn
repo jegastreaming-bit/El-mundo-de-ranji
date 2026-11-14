@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://yfnjq6pn2dh2" path="res://Escenas/Personaje.tscn" id="3_j3pye"]
 [ext_resource type="Texture2D" uid="uid://ba8xjtqnsu780" path="res://Imagenes/Arbusto.png" id="5_dye8q"]
 [ext_resource type="PackedScene" uid="uid://dsfv5tarrbq5t" path="res://Enemys/Enemy Forest.tscn" id="7_0ecuo"]
+[ext_resource type="Texture2D" uid="uid://cqi36vg4hhgt5" path="res://Imagenes/Castillo.png" id="8_5uede"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t6qw"]
 texture = ExtResource("1_i534f")
@@ -2291,5 +2292,10 @@ position = Vector2(2216, -593)
 SPEED = 650.0
 
 [node name="EnemyForest" parent="." unique_id=1313764152 instance=ExtResource("7_0ecuo")]
-position = Vector2(5629, -124)
+position = Vector2(4329.0005, 43.000015)
 scale = Vector2(1.4918419, 1.3534024)
+
+[node name="Castillo" type="Sprite2D" parent="." unique_id=459013794]
+position = Vector2(7106.0005, 423.99997)
+scale = Vector2(2.498, 1.866)
+texture = ExtResource("8_5uede")
