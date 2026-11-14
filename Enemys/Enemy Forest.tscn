@@ -312,6 +312,9 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7syq"]
+size = Vector2(584, 172)
+
 [node name="EnemyForest" type="CharacterBody2D" unique_id=1313764152]
 script = ExtResource("1_w4jhd")
 
@@ -326,3 +329,10 @@ scale = Vector2(4.6125, 4.609375)
 sprite_frames = SubResource("SpriteFrames_f7uq2")
 animation = &"Walk"
 frame_progress = 0.04758169
+
+[node name="ZonaAtaque" type="Area2D" parent="." unique_id=1991837047]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaAtaque" unique_id=691638115]
+position = Vector2(337, 308)
+shape = SubResource("RectangleShape2D_g7syq")
+debug_color = Color(0.9411765, 0.09019608, 0.1882353, 0.41960785)
