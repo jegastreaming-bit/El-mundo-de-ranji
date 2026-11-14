@@ -77,6 +77,12 @@ height = 144.0
 [node name="Personaje" type="CharacterBody2D" unique_id=1651539906]
 position = Vector2(201, 222)
 script = ExtResource("1_0gco6")
+SPEED = null
+JUMP_VELOCITY = null
+MAX_JUMPS = null
+VIDA_MAXIMA = null
+TIEMPO_INVULNERABLE = null
+KILL_Y = null
 
 [node name="Ranji" type="AnimatedSprite2D" parent="." unique_id=1396417867]
 position = Vector2(244.99998, 134)

@@ -190,10 +190,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7uq2"]
 size = Vector2(590, 3843)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0c0kl"]
+size = Vector2(247, 396)
+
 [node name="EnemyForestFly" type="CharacterBody2D" unique_id=160523695]
 script = ExtResource("1_e5sfd")
-VELOCIDAD = 400.0
-DISTANCIA_PATRULLA = 600.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1931499306]
 position = Vector2(509.5, 258)
@@ -205,11 +206,18 @@ position = Vector2(513, 265)
 scale = Vector2(5.59375, 5.171875)
 sprite_frames = SubResource("SpriteFrames_f7uq2")
 animation = &"Attack"
-frame_progress = 0.38494474
+frame_progress = 0.6046991
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1694689712]
+[node name="Deteccion" type="Area2D" parent="." unique_id=1694689712]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1758175221]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deteccion" unique_id=1758175221]
 position = Vector2(516, 2077.5)
 shape = SubResource("RectangleShape2D_f7uq2")
 debug_color = Color(0.62352943, 0.14509805, 0.9607843, 0.41960785)
+
+[node name="Danio" type="Area2D" parent="." unique_id=1226619000]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Danio" unique_id=408402955]
+position = Vector2(487.5, 208)
+shape = SubResource("RectangleShape2D_0c0kl")
+debug_color = Color(0.28265962, 0.622098, 0.31498477, 0.41960785)
