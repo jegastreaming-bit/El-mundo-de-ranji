@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://djbfwikisrjy6"]
 
-[node name="NivelHielo" type="Node2D" unique_id=636750651]
+[ext_resource type="PackedScene" uid="uid://bb3a4hht82sy3" path="res://Escenas/fondo de hielo.tscn" id="1_lo2yx"]
+
+[node name="NivelHielo" type="StaticBody2D" unique_id=848199476]
+
+[node name="FondoDeHielo" parent="." unique_id=593428420 instance=ExtResource("1_lo2yx")]
+position = Vector2(-3, -17)

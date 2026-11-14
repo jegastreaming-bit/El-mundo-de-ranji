@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://bb3a4hht82sy3"]
 
+[ext_resource type="Texture2D" uid="uid://b1by75mit8o50" path="res://Imagenes/fondo de hielo.jpeg" id="1_131e6"]
+
 [node name="FondoDeHielo" type="Node2D" unique_id=593428420]
+metadata/_edit_group_ = true
+
+[node name="FondoDeHielo" type="Sprite2D" parent="." unique_id=554131749]
+position = Vector2(1349.0001, 598)
+scale = Vector2(3.5489795, 2.2591834)
+texture = ExtResource("1_131e6")
+
+[node name="FondoDeHielo2" type="Sprite2D" parent="." unique_id=1470790519]
+position = Vector2(3824.75, 596.3125)
+scale = Vector2(3.187075, 2.255867)
+texture = ExtResource("1_131e6")
+
+[node name="FondoDeHielo3" type="Sprite2D" parent="." unique_id=1170819345]
+position = Vector2(6096, 602)
+scale = Vector2(2.9952388, 2.2816327)
+texture = ExtResource("1_131e6")
