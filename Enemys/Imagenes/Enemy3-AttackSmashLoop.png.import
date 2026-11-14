@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwjkvj10uj77u"
-path="res://.godot/imported/Enemy3-AttackSmashLoop.png-d9545c8f43aa465458ebc25a3e45493e.ctex"
+path="res://.godot/imported/Enemy3-AttackSmashLoop.png-cde157dbad8df6200770241cfdb69848.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemys/Enemy3-AttackSmashLoop.png"
-dest_files=["res://.godot/imported/Enemy3-AttackSmashLoop.png-d9545c8f43aa465458ebc25a3e45493e.ctex"]
+source_file="res://Enemys/Imagenes/Enemy3-AttackSmashLoop.png"
+dest_files=["res://.godot/imported/Enemy3-AttackSmashLoop.png-cde157dbad8df6200770241cfdb69848.ctex"]
 
 [params]
 

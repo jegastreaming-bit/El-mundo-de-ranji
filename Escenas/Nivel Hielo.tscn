@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bb3a4hht82sy3" path="res://Escenas/fondo de hielo.tscn" id="1_lo2yx"]
 [ext_resource type="Texture2D" uid="uid://dae8khnpb8yf4" path="res://Imagenes/hielo.jpg" id="2_7nexu"]
+[ext_resource type="PackedScene" uid="uid://yfnjq6pn2dh2" path="res://Escenas/Personaje.tscn" id="3_617rt"]
+[ext_resource type="PackedScene" uid="uid://bcg5h6unf14n0" path="res://Enemys/golem_h.tscn" id="4_dd2ed"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e0343"]
 texture = ExtResource("2_7nexu")
@@ -33,3 +35,9 @@ tile_set = SubResource("TileSet_g7syq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1933750445]
 position = Vector2(1929, 953.5)
 shape = SubResource("RectangleShape2D_mfmc5")
+
+[node name="Personaje" parent="." unique_id=1651539906 instance=ExtResource("3_617rt")]
+position = Vector2(468, 468)
+
+[node name="Golem H" parent="." unique_id=387964595 instance=ExtResource("4_dd2ed")]
+position = Vector2(1337, 344)

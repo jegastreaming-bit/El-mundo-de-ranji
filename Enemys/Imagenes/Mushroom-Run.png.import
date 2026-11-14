@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0nkdsam80smq"
-path="res://.godot/imported/Golem_1_idle.png-9f5a99613b090a42481f74ff44361a19.ctex"
+uid="uid://b3g77t5tomhek"
+path="res://.godot/imported/Mushroom-Run.png-856f894634f3e12305920d345b2f2513.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemys/Golem_1_idle.png"
-dest_files=["res://.godot/imported/Golem_1_idle.png-9f5a99613b090a42481f74ff44361a19.ctex"]
+source_file="res://Enemys/Imagenes/Mushroom-Run.png"
+dest_files=["res://.godot/imported/Mushroom-Run.png-856f894634f3e12305920d345b2f2513.ctex"]
 
 [params]
 

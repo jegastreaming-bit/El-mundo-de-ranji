@@ -6,6 +6,7 @@
 metadata/_edit_group_ = true
 
 [node name="FondoDeHielo" type="Sprite2D" parent="." unique_id=554131749]
+texture_filter = 1
 position = Vector2(1349.0001, 598)
 scale = Vector2(3.5489795, 2.2591834)
 texture = ExtResource("1_131e6")

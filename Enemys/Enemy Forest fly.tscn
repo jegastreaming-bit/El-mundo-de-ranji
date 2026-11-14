@@ -1,9 +1,71 @@
 [gd_scene format=3 uid="uid://b8ruhydsb7t7c"]
 
-[ext_resource type="Texture2D" uid="uid://vt8quk78jfbh" path="res://Enemys/Flying enemy.png" id="1_yhaqt"]
+[ext_resource type="Texture2D" uid="uid://oojt6b055ge0" path="res://Enemys/Imagenes/Enemy3-AttackSmashStart.png" id="1_8j5lc"]
+[ext_resource type="Texture2D" uid="uid://vt8quk78jfbh" path="res://Enemys/Imagenes/Flying enemy.png" id="1_yhaqt"]
+[ext_resource type="Texture2D" uid="uid://dwjkvj10uj77u" path="res://Enemys/Imagenes/Enemy3-AttackSmashLoop.png" id="2_e5sfd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2j6x"]
 size = Vector2(249, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpgsu"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52ndx"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lk27l"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3efhw"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr4q4"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8k77j"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc0au"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycjej"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0f04"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qm6bd"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1icoc"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6rxn"]
+atlas = ExtResource("1_8j5lc")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0d24t"]
+atlas = ExtResource("2_e5sfd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guqge"]
+atlas = ExtResource("2_e5sfd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xajr2"]
+atlas = ExtResource("2_e5sfd")
+region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1gctc"]
 atlas = ExtResource("1_yhaqt")
@@ -39,6 +101,61 @@ region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f7uq2"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpgsu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52ndx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lk27l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3efhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr4q4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8k77j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xc0au")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycjej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0f04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qm6bd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1icoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6rxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0d24t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_guqge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xajr2")
+}],
+"loop": 1,
+"name": &"Attack",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Die",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1gctc")
@@ -80,5 +197,5 @@ texture_filter = 1
 position = Vector2(513, 265)
 scale = Vector2(5.59375, 5.171875)
 sprite_frames = SubResource("SpriteFrames_f7uq2")
-animation = &"Idle"
-frame_progress = 0.4125162
+animation = &"Attack"
+frame_progress = 0.30737987

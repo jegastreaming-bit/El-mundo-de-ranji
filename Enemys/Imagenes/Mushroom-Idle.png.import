@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oojt6b055ge0"
-path="res://.godot/imported/Enemy3-AttackSmashStart.png-791a4712cb6413b07490cff426099ec9.ctex"
+uid="uid://735vw8sqsb3k"
+path="res://.godot/imported/Mushroom-Idle.png-92d348057417c1728525ccab799e528c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemys/Enemy3-AttackSmashStart.png"
-dest_files=["res://.godot/imported/Enemy3-AttackSmashStart.png-791a4712cb6413b07490cff426099ec9.ctex"]
+source_file="res://Enemys/Imagenes/Mushroom-Idle.png"
+dest_files=["res://.godot/imported/Mushroom-Idle.png-92d348057417c1728525ccab799e528c.ctex"]
 
 [params]
 

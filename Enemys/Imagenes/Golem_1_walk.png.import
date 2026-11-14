@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn0a3oo8hjbof"
-path="res://.godot/imported/Mushroom-Die.png-a48c501ea1650700df5362db5965d0e8.ctex"
+uid="uid://dw3t7phkhhbue"
+path="res://.godot/imported/Golem_1_walk.png-608a48d195ab5b968bccf268186a67c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemys/Mushroom-Die.png"
-dest_files=["res://.godot/imported/Mushroom-Die.png-a48c501ea1650700df5362db5965d0e8.ctex"]
+source_file="res://Enemys/Imagenes/Golem_1_walk.png"
+dest_files=["res://.godot/imported/Golem_1_walk.png-608a48d195ab5b968bccf268186a67c4.ctex"]
 
 [params]
 

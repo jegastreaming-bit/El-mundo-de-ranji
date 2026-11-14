@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vt8quk78jfbh"
-path="res://.godot/imported/Flying enemy.png-544a6237ccf9c3bd9f7480c9d70ab522.ctex"
+uid="uid://oojt6b055ge0"
+path="res://.godot/imported/Enemy3-AttackSmashStart.png-29961ec7c49debab1810e2af7e72a073.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemys/Flying enemy.png"
-dest_files=["res://.godot/imported/Flying enemy.png-544a6237ccf9c3bd9f7480c9d70ab522.ctex"]
+source_file="res://Enemys/Imagenes/Enemy3-AttackSmashStart.png"
+dest_files=["res://.godot/imported/Enemy3-AttackSmashStart.png-29961ec7c49debab1810e2af7e72a073.ctex"]
 
 [params]
 
