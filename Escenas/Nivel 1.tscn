@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b8ruhydsb7t7c" path="res://Enemys/Enemy Forest fly.tscn" id="6_7lvdd"]
 [ext_resource type="PackedScene" uid="uid://c0xgedfk1heft" path="res://Escenas/Plataforma X.tscn" id="7_7lvdd"]
 [ext_resource type="Texture2D" uid="uid://b7mm3u5p5fg12" path="res://Imagenes/final.jpg" id="8_yytuy"]
+[ext_resource type="PackedScene" uid="uid://c2qyglo5ymtjq" path="res://Escenas/final.tscn" id="9_5tyj2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4642a"]
 texture = ExtResource("1_rjcp1")
@@ -2087,3 +2088,6 @@ position = Vector2(59776, 206)
 shape = SubResource("RectangleShape2D_0c0kl")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=154775815]
+
+[node name="Final2" parent="." unique_id=122853087 instance=ExtResource("9_5tyj2")]
+position = Vector2(55861, 2813)
